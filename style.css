@@ -1,0 +1,64 @@
+body {
+    background-color: #e6e6e6;
+    box-sizing: border-box;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.lopp {
+    position: relative;
+    background-color: #151515;
+    width: 10rem;
+    height: 10rem;
+    transform: rotate(45deg);
+    animation: bergetar 1s infinite;
+}
+
+.lopp::before,
+.lopp::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 10rem;
+    height: 10rem;
+    background-color: #151515;
+    border-radius: 50%;
+}
+
+.lopp::before {
+    top: 0;
+    left: -5rem;
+}
+
+.lopp::after {
+    top: -5rem;
+    left: 0;
+}
+
+/*  === ANIMATION === */
+@keyframes bergetar {
+    o% {
+        transform: rotate(45deg) scale(.8);
+    }
+
+    5% {
+        transform: rotate(45deg) scale(.9);
+    }
+
+    10% {
+        transform: rotate(45deg) scale(.8);
+    }
+
+    15% {
+        transform: rotate(45deg) scale(1);
+    }
+
+    5o% {
+        transform: rotate(45deg) scale(.8);
+    }
+
+    100% {
+        transform: rotate(45deg) scale(.8);
+    }
+}
